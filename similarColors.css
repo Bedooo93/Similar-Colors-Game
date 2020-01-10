@@ -1,0 +1,213 @@
+body{
+    background: blueviolet;
+    height: 100%;
+}
+
+#container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 100px 450px 300px;
+    grid-template-areas: 
+    ". i ."
+    "t s ."
+    ". . .";
+ 
+}
+
+#indexTitle{
+   grid-area: s;
+   text-align: center;
+   font-size: 50px;
+   margin-top: 50px;
+   color: GOLD;
+   font-family: 'Josefin Sans', sans-serif;
+}
+
+#startButton, #playAgain{
+   width: 400px;
+   height: 100px;
+   margin: 300px auto;
+   font-size: 40px;
+   font-family: 'Josefin Sans', sans-serif;
+   color: gold;
+   background-color: deeppink;
+   border-style: none;
+   border-radius: 10px 10px 10px 10px;
+   grid-area: s;
+
+}
+#startButton:hover{
+   cursor: pointer;
+   transform: scale(1.05);
+   animation-name: colors;
+   animation-duration: 2s;
+   animation-fill-mode: forwards;
+}
+@keyframes colors{
+   100%{
+      background-color: crimson;
+   }
+}
+#playAgain:hover{
+   cursor: pointer;
+   transform: scale(1.05);
+}
+#firstLevel{
+   width: 400px;
+   height: 100px;
+   margin-top: 200px;
+   font-size: 100px;
+   font-family: 'Josefin Sans', sans-serif;
+   color: gold;
+   grid-area: s;
+}
+
+/* title */
+
+#title{
+    grid-area: t;
+    text-align: center;
+    font-size: 50px;
+    margin-top: 50px;
+    color: GOLD;
+    font-family: 'Josefin Sans', sans-serif;
+
+
+}
+
+/* cardsArea */
+
+.square{
+    background-color: black;
+    border-style: solid;
+    border-width: 3px;
+    border-color: rgb(109, 82, 117);
+    float: left;
+}
+.hide{
+    visibility: hidden;
+    background-color: black;
+    float: left;
+}
+
+#cardsArea{
+    grid-area: s;
+    display: grid;
+   grid-template-columns: repeat(4, 1fr);
+   grid-template-rows: repeat(4, auto);
+    grid-template-areas: 
+    "e m j h"
+    "k a b p"
+    "o c d l"
+    "g i n f";
+    background-color: rgba(109, 82, 117, 0.3);
+}
+#square1{
+   grid-area:a ;
+}
+#square2{
+    grid-area:b ;
+ }
+#square3{
+    grid-area:c ;
+ }
+#square4{
+    grid-area:d ;
+ }
+ #square5{
+    grid-area:e ;
+ }
+ #square6{
+    grid-area:f ;
+ }
+ #square7{
+    grid-area:g ;
+ }
+ #square8{
+    grid-area:h ;
+ }
+ #square9{
+    grid-area:i ;
+ }
+ #square10{
+     grid-area:j ;
+  }
+#square11{
+     grid-area:k ;
+  }
+#square12{
+     grid-area:l ;
+  }
+#square13{
+     grid-area:m ;
+  }
+#square14{
+     grid-area:n ;
+  }
+#square15{
+     grid-area:o ;
+  }
+#square16{
+     grid-area:p ;
+  }
+
+/* GameInfo */
+
+#gameInfo{
+    grid-area: t;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas: 
+    ". ."
+    "s .";
+    
+    color: gold;
+    font-size: 25px;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+#score{
+    grid-area: s;
+}
+#score > span:first-child {
+   position: relative;
+   margin-top: 100px;
+   float: left;
+}
+#score > span:last-child {
+   float: left;
+   position: relative;
+   margin-top: 100px;
+   margin-left: 10px;
+}
+
+#time{
+    grid-area: s;
+
+}
+
+#gameOver{
+   text-align: center;
+   font-size: 50px;
+   grid-area: s;
+   margin-top: 100px;
+   color: gold;
+   font-family: s'Josefin Sans', sans-serif;
+}
+
+#gameCompleted{
+   text-align: center;
+   font-size: 50px;
+   grid-area: s;
+   margin-top: 100px;
+   color: gold;
+   font-family: 'Josefin Sans', sans-serif;
+}
+
+#yourScore{
+   text-align: center;
+   font-size: 40px;
+   margin-top: 50px;
+   color: gold;
+   font-family: 'Josefin Sans', sans-serif;
+}
